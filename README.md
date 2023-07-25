@@ -43,7 +43,7 @@ This project is a Lambda function that scrapes URLs for links and content, trans
 
 ## Usage
 
-To use this function, provide a list of URLs as input. The function will scrape the URLs for links, scrape the webpages for content, transform the content into embeddings, and store the embeddings and links.
+To use this function, provide a list of URLs as input. You will also need to provide a namespace which is used in the Pinecone DB to keep data separate and organized, as well as in a MongoDB namespace collection. The function will scrape the URLs for links, scrape the webpages for content, transform the content into embeddings, and store the embeddings and links.
 
 ## Contributing
 
