@@ -1,0 +1,21 @@
+{
+  "name": "lambda-webpage-vector-store",
+  "version": "1.0.3",
+  "description": "AWS Lambda package to crawl for URLs, get page content, and store it using OpenAI embedding and Pinecone Vector DB",
+  "type": "module",
+  "main": "index.js",
+  "author": "J Hanlon",
+  "license": "ISC",
+  "dependencies": {
+    "@pinecone-database/pinecone": "^0.1.5",
+    "@sparticuz/chromium": "^115.0.0",
+    "axios": "^1.4.0",
+    "bottleneck": "^2.19.5",
+    "html-to-md": "^0.8.3",
+    "langchain": "^0.0.75",
+    "mongodb": "^5.6.0",
+    "openai": "^3.2.1",
+    "puppeteer-core": "^20.9.0",
+    "uuid": "^9.0.0"
+  }
+}
