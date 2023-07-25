@@ -58,6 +58,21 @@ The following environment variables are required for the function to run properl
 
 To use this function, provide a list of URLs as input. You will also need to provide a namespace which is used in the Pinecone DB to keep data separate and organized, as well as in a MongoDB namespace collection. The function will scrape the URLs for links, scrape the webpages for content, transform the content into embeddings, and store the embeddings and links.
 
+
+## Developer Documentation
+
+This project includes a `Crawler` class that handles the scraping and processing of web content. The class includes the following methods:
+
+- `handleRequest(url)`: This method handles the request to a URL and returns all the links on the page that start with the original URL.
+- `handlePageCrawl(url, index, embedder)`: This method handles the crawling of a page. It scrapes the page for content, splits the content into chunks, transforms the chunks into embeddings, and stores the embeddings in Pinecone Vector DB.
+- `crawlForUrls()`: This method handles the crawling of URLs. It adds all the URLs that have been crawled to a MongoDB collection.
+- `startPageCrawl(index, embedder)`: This method starts the crawling of pages. It loads all the URLs that have been crawled into memory and starts crawling the pages.
+
+The `Crawler` class uses several helper functions:
+
+- `truncateStringByBytes(str, bytes)`: This function truncates a string to a specified number of bytes.
+- `sliceIntoChunks(arr, maxSizeInBytes)`: This function slices an array into chunks of a specified maximum size in bytes.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
