@@ -33,13 +33,26 @@ This project is a Lambda function that scrapes URLs for links and content, trans
 - Pinecone account
 - Node.js and npm installed on your local machine
 
+### Environment Variables
+
+The following environment variables are required for the function to run properly:
+
+- `MONGODB_URI`: Your MongoDB URI
+- `MONGODB_DB`: Your MongoDB database name
+- `PINECONE_INDEX_NAME`: Your Pinecone index name
+- `PINECONE_ENVIRONMENT`: Your Pinecone environment
+- `PINECONE_API_KEY`: Your Pinecone API key
+- `OPENAI_API_KEY`: Your OpenAI API key
+- `OPENAI_ORGANIZATION`: Your OpenAI organization
+
 ### Installation
 
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Install the dependencies with `npm install`.
-4. Set up your environment variables for AWS, MongoDB, OpenAI, and Pinecone in a `.env` file.
+4. Set up your environment variables for AWS, MongoDB, OpenAI, and Pinecone.
 5. Deploy the function to AWS Lambda.
+
 
 ## Usage
 
