@@ -60,7 +60,7 @@ To use this function, provide a list of URLs as input. You will also need to pro
 
 - You MUST provide a namespace (string). This will be used for MongoDB AND for the Pinecone DB.
 - You MUST provide a teamId (string). This will be used for MongoDB.
-- If you DO provide an array of URLs, it will scrape those URLs for links for the queue.
+- If you DO provide an array of URLs, it will scrape those URLs for links for the queue, and add them to your MongoDB.
 - If you DONT provide an array of URLs, it will pull the namespace data from MongoDB and scrape the queue URLs for content. It will create vectors of that content, split them into chunks (1.MB max), then store the vector chunks + metadata (url and chuck) to Pinecone.
 
 ## Developer Documentation
