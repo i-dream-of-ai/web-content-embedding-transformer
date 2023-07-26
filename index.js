@@ -100,9 +100,10 @@ export async function handler(event, context) {
         };
       }
       
+      console.log('Crawl Complete. Saved urls to database.', JSON.stringify(urls) )
       return {
         statusCode: 200,
-        body: JSON.stringify({ message: 'Crawl Complete. Saved urls to database.' })
+        body: JSON.stringify({ message: 'Crawl Complete. Saved urls to database.'})
       };
   
     } else {
