@@ -58,6 +58,10 @@ The following environment variables are required for the function to run properl
 
 To use this function, provide a list of URLs as input. You will also need to provide a namespace which is used in the Pinecone DB to keep data separate and organized, as well as in a MongoDB namespace collection. The function will scrape the URLs for links, scrape the webpages for content, transform the content into embeddings, and store the embeddings and links.
 
+- You MUST provide a namespace (string). This will be used for MongoDB AND for the Pinecone DB.
+- You MUST provide a teamId (string). This will be used for MongoDB.
+- If you DO provide an array of URLs, it will scrape those URLs for links for the queue.
+- If you DONT provide an array of URLs, it will pull the namespace data from MongoDB and scrape the queue URLs for content. It will create vectors of that content, split them into chunks (1.MB max), then store the vector chunks + metadata (url and chuck) to Pinecone.
 
 ## Developer Documentation
 
